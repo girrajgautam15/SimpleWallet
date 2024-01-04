@@ -1,0 +1,15 @@
+<form (ngSubmit)="getUser()">
+    <div class="form-group">
+        <label>ID</label>
+        <input type="number" id="email" [(ngModel)]="id" name="email">
+        <button type="submit" *ngIf="!flag">Show Details</button>
+        <button type="submit" *ngIf="flag">Hide Details</button>
+    </div>
+    
+</form>
+
+<div *ngIf="flag" >
+    <li>{{user.name}}</li>
+    <li>{{user.email}}</li>
+    <li>{{user.amount}}</li>
+</div>
